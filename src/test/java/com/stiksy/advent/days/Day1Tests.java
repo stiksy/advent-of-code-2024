@@ -1,6 +1,5 @@
-package com.stiksy.advent.day1;
+package com.stiksy.advent.days;
 
-import com.stiksy.advent.days.Day1;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
