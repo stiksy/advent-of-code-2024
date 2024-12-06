@@ -32,12 +32,42 @@ public class Day6 {
     public String walk(String input) {
         String[] lines = input.split("\n");
         int[] startPosition = findXY(lines);
-        char startDirection = lines[startPosition[1]].charAt(startPosition[0]);
+        boolean passedStartGoingUp = false;
+        boolean passedStartGoingRight = false;
+        boolean passedStartGoingDown = false;
+        boolean passedStartGoingLeft = false;
         int counter = 0;
         while (true) {
             int[] position = findXY(lines);
             int x = position[0];
             int y = position[1];
+            if (x == startPosition[0] && y == startPosition[1]) {
+                if (lines[y].charAt(x) == '^') {
+                    if (passedStartGoingUp) {
+                        break;
+                    } else {
+                        passedStartGoingUp = true;
+                    }
+                } else if (lines[y].charAt(x) == '>') {
+                    if (passedStartGoingRight) {
+                        break;
+                    } else {
+                        passedStartGoingRight = true;
+                    }
+                } else if (lines[y].charAt(x) == 'v') {
+                    if (passedStartGoingDown) {
+                        break;
+                    } else {
+                        passedStartGoingDown = true;
+                    }
+                } else if (lines[y].charAt(x) == '<') {
+                    if (passedStartGoingLeft) {
+                        break;
+                    } else {
+                        passedStartGoingLeft = true;
+                    }
+                }
+            }
             if (lines[y].charAt(x) == '^') {
                 if (y == 0) {
                     lines = stop(lines, x, y);
@@ -79,10 +109,7 @@ public class Day6 {
                     lines = walkLeft(lines, x, y);
                 }
             }
-            if (x == startPosition[0] && y == startPosition[1] && lines[y].charAt(x) == startDirection) {
-                break;
-            }
-            if (counter == 100000) {
+            if (counter == 10000) {
                 break;
             }
             counter++;

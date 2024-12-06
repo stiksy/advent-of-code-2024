@@ -233,7 +233,7 @@ public class Day6Tests {
     void shouldCountFinalLoops() {
         Day6 day6 = new Day6();
         int count = day6.countLoops(finalInput);
-        assertEquals(6, count);
+        assertEquals(2022, count);
     }
 
     @Test
