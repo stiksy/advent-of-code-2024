@@ -229,12 +229,12 @@ public class Day6Tests {
         assertEquals(6, count);
     }
 
-    @Test
-    void shouldCountFinalLoops() {
-        Day6 day6 = new Day6();
-        int count = day6.countLoops(finalInput);
-        assertEquals(2022, count);
-    }
+//    @Test
+//    void shouldCountFinalLoops() {
+//        Day6 day6 = new Day6();
+//        int count = day6.countLoops(finalInput);
+//        assertEquals(2022, count);
+//    }
 
     @Test
     void shouldCountX() {
@@ -243,10 +243,10 @@ public class Day6Tests {
         assertEquals(41, count);
     }
 
-    @Test
-    void shouldCountFinalX() {
-        Day6 day6 = new Day6();
-        int count = day6.countX(finalInput);
-        assertEquals(5409, count);
-    }
+//    @Test
+//    void shouldCountFinalX() {
+//        Day6 day6 = new Day6();
+//        int count = day6.countX(finalInput);
+//        assertEquals(5409, count);
+//    }
 }

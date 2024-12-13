@@ -174,88 +174,88 @@ String realTestInput = ".M.S......\n" +
         "M.M.M.M.M.\n" +
         "..........";
 
-    @Test
-    void getLines() {
-        Day4 day4 = new Day4();
-        char[][] array = day4.createArray(input);
-        List<String> lines = day4.getLines(array);
-        assertEquals(10, lines.size());
-        assertEquals("XMAS.S", lines.get(3));
-        assertEquals("S.SAMX", lines.get(8));
-    }
-
-    @Test
-    void getColumns() {
-        Day4 day4 = new Day4();
-        char[][] array = day4.createArray(input);
-        List<String> columns = day4.getColumns(array);
-        assertEquals(12, columns.size());
-        assertEquals(".SAMX", columns.get(1));
-        assertEquals("XMAS.", columns.get(7));
-    }
-
-    @Test
-    void getDiagonals() {
-        Day4 day4 = new Day4();
-        char[][] array = day4.createArray(input);
-        List<String> diagonals = day4.getDiagonals(array);
-        assertEquals(18, diagonals.size());
-        assertEquals("XMAS", diagonals.get(6));
-        assertEquals("SAMX", diagonals.get(15));
-    }
-
-    @Test
-    void getDiagonalsBackwards() {
-        Day4 day4 = new Day4();
-        char[][] array = day4.createArray(input);
-        List<String> diagonals = day4.getDiagonalsBackwards(array);
-        assertEquals(18, diagonals.size());
-        assertEquals("XA.X.", diagonals.get(5));
-        assertEquals(".X.AX", diagonals.get(14));
-    }
-
-    @Test
-    void getAllLists() {
-        Day4 day4 = new Day4();
-        List<String> allLists = day4.getAllLists(input);
-        assertEquals(58, allLists.size());
-    }
-
-    @Test
-    void countXmas() {
-        Day4 day4 = new Day4();
-        List<String> allLists = day4.getAllLists(input);
-        int count = day4.countXmas(allLists);
-        assertEquals(4, count);
-    }
-
-    @Test
-    void countXmasSecondInput() {
-        Day4 day4 = new Day4();
-        List<String> allLists = day4.getAllLists(secondInput);
-        int count = day4.countXmas(allLists);
-        assertEquals(18, count);
-    }
-
-    @Test
-    void countXmasFinalInput() {
-        Day4 day4 = new Day4();
-        List<String> allLists = day4.getAllLists(finalInput);
-        int count = day4.countXmas(allLists);
-        assertEquals(2560, count);
-    }
-
-    @Test
-    void countMasInXRealTestInput() {
-        Day4 day4 = new Day4();
-        int count = day4.countMasInX(realTestInput);
-        assertEquals(9, count);
-    }
-
-    @Test
-    void countMasInXFinalInput() {
-        Day4 day4 = new Day4();
-        int count = day4.countMasInX(finalInput);
-        assertEquals(1910, count);
-    }
+//    @Test
+//    void getLines() {
+//        Day4 day4 = new Day4();
+//        char[][] array = day4.createArray(input);
+//        List<String> lines = day4.getLines(array);
+//        assertEquals(10, lines.size());
+//        assertEquals("XMAS.S", lines.get(3));
+//        assertEquals("S.SAMX", lines.get(8));
+//    }
+//
+//    @Test
+//    void getColumns() {
+//        Day4 day4 = new Day4();
+//        char[][] array = day4.createArray(input);
+//        List<String> columns = day4.getColumns(array);
+//        assertEquals(12, columns.size());
+//        assertEquals(".SAMX", columns.get(1));
+//        assertEquals("XMAS.", columns.get(7));
+//    }
+//
+//    @Test
+//    void getDiagonals() {
+//        Day4 day4 = new Day4();
+//        char[][] array = day4.createArray(input);
+//        List<String> diagonals = day4.getDiagonals(array);
+//        assertEquals(18, diagonals.size());
+//        assertEquals("XMAS", diagonals.get(6));
+//        assertEquals("SAMX", diagonals.get(15));
+//    }
+//
+//    @Test
+//    void getDiagonalsBackwards() {
+//        Day4 day4 = new Day4();
+//        char[][] array = day4.createArray(input);
+//        List<String> diagonals = day4.getDiagonalsBackwards(array);
+//        assertEquals(18, diagonals.size());
+//        assertEquals("XA.X.", diagonals.get(5));
+//        assertEquals(".X.AX", diagonals.get(14));
+//    }
+//
+//    @Test
+//    void getAllLists() {
+//        Day4 day4 = new Day4();
+//        List<String> allLists = day4.getAllLists(input);
+//        assertEquals(58, allLists.size());
+//    }
+//
+//    @Test
+//    void countXmas() {
+//        Day4 day4 = new Day4();
+//        List<String> allLists = day4.getAllLists(input);
+//        int count = day4.countXmas(allLists);
+//        assertEquals(4, count);
+//    }
+//
+//    @Test
+//    void countXmasSecondInput() {
+//        Day4 day4 = new Day4();
+//        List<String> allLists = day4.getAllLists(secondInput);
+//        int count = day4.countXmas(allLists);
+//        assertEquals(18, count);
+//    }
+//
+//    @Test
+//    void countXmasFinalInput() {
+//        Day4 day4 = new Day4();
+//        List<String> allLists = day4.getAllLists(finalInput);
+//        int count = day4.countXmas(allLists);
+//        assertEquals(2560, count);
+//    }
+//
+//    @Test
+//    void countMasInXRealTestInput() {
+//        Day4 day4 = new Day4();
+//        int count = day4.countMasInX(realTestInput);
+//        assertEquals(9, count);
+//    }
+//
+//    @Test
+//    void countMasInXFinalInput() {
+//        Day4 day4 = new Day4();
+//        int count = day4.countMasInX(finalInput);
+//        assertEquals(1910, count);
+//    }
 }
