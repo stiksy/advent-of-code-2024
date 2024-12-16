@@ -15,7 +15,7 @@ public class Day11 {
         return stones;
     }
 
-    public Map<Long, Integer> blink(Map<Long, Integer> map) {
+    public Map<Long, Integer> blink(Map<Long, Integer> map, int times) {
         Map<Long, Integer> tempMap = new HashMap<>();
         for (Map.Entry<Long, Integer> entry : map.entrySet()) {
             if (entry.getKey() == 0L) {

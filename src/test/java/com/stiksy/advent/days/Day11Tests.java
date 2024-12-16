@@ -23,7 +23,7 @@ public class Day11Tests {
     void blink() {
         Day11 day11 = new Day11();
         Map<Long, Integer> stones = day11.breakInput(input);
-        Map<Long, Integer> afterBlink = day11.blink(stones);
+        Map<Long, Integer> afterBlink = day11.blink(stones, 1);
         assertEquals(5, afterBlink.size());
         assertEquals(1, afterBlink.get(0));
         assertEquals(2, afterBlink.get(1));
@@ -36,7 +36,7 @@ public class Day11Tests {
     void blink2() {
         Day11 day11 = new Day11();
         Map<Long, Integer> stones = day11.breakInput(input2);
-        Map<Long, Integer> afterBlink = day11.blink(stones);
+        Map<Long, Integer> afterBlink = day11.blink(stones, 1);
         assertEquals(3, afterBlink.size());
         assertEquals(253000, afterBlink.get(0));
         assertEquals(1, afterBlink.get(1));
