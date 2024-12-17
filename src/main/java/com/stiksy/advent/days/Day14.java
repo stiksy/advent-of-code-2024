@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 public class Day14 {
     public static int seconds = 0;
+    static boolean foundEasterEgg = false;
 
     public List<Robot> parseInput(String input) {
         String lines[] = input.split("\n");
@@ -55,6 +56,9 @@ public class Day14 {
                 addToMap(map, robot.position.y, robot.position.x);
             }
             printMap(map);
+            if (foundEasterEgg) {
+                break;
+            }
         }
         return map;
     }
@@ -70,6 +74,8 @@ public class Day14 {
                     }
                     System.out.println("\n\nSeconds: " + seconds);
                     System.out.println(actualMap.stream().collect(Collectors.joining("\n")));
+                    foundEasterEgg = true;
+                    return;
                 }
             }
         }

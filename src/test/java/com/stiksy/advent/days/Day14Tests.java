@@ -639,8 +639,17 @@ public class Day14Tests {
         Day14 day = new Day14();
         List<Robot> robots = day.parseInput(finalInput);
         char[][] map = day.createEmptyMap(101, 103);
-        map = day.walkRobots(robots, map, 100000);
+        map = day.walkRobots(robots, map, 100);
         long safetyFactor = day.getSafetyFactor(map);
         assertEquals(219512160, safetyFactor);
+    }
+
+    @Test
+    void getEasterEgg() {
+        Day14 day = new Day14();
+        List<Robot> robots = day.parseInput(finalInput);
+        char[][] map = day.createEmptyMap(101, 103);
+        map = day.walkRobots(robots, map, Integer.MAX_VALUE);
+        assertEquals(6398, day.seconds);
     }
 }
