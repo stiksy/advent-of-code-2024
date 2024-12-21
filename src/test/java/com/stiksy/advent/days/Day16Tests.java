@@ -1,6 +1,5 @@
 package com.stiksy.advent.days;
 
-import com.stiksy.advent.days.Day16.Position;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

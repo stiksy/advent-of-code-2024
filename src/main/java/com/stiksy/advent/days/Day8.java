@@ -83,4 +83,12 @@ public class Day8 {
         }
         return pairs;
     }
+
+    public static class Day17Debugger {
+        long registerA;
+        long registerB;
+        long registerC;
+        List<Integer> instructions = new ArrayList<>();
+        String output = "";
+    }
 }
